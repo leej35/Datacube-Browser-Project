@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title></title>
+
+<link href="jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="chsi.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body, th, td{font:75%% Verdana,Arial,sans-serif}
+</style>
+<script type="text/javascript" src="d3.js"></script>
+<script type="text/javascript" src="d3.geom.js"></script>
+<script type="text/javascript" src="d3.layout.js"></script>
+<script type="text/javascript" src="d3.chart.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.rdfquery.js"></script>
+<script type="text/javascript" src="selectToUISlider.jQuery.js"></script>
+<script type="text/javascript" src="data.js"></script>
+</head>
+
+<body>
+<h1>Community Health Status Indicators: DataCube Browser</h1>
+<table>
+<tr>
+  <td style="width:300px;vertical-align:top">
+    <h2>Measures</h2>
+      <form>
+        <div id="picker" ></div>
+      </form>
+  </td>
+  <td style="vertical-align:top">
+    <span id="chart"><p>Select two or more measures.</p></span>
+    <form action="#">
+      <fieldset>
+        <label for="year">Year:</label>
+        <select name="year" id="year"/>
+      </fieldset>
+    </form>
+  </td>
+</tr>
+</table>
+<script>
+datasets =[
+    "http://logd.tw.rpi.edu/source/impacteen-org/dataset/tobacco-control-policy-and-prevalence/version/2012-Jan-16"
+//    "http://logd.tw.rpi.edu/source/data-gov/dataset/2159/version/2011-Dec-07",
+//    "http://logd.tw.rpi.edu/source/impacteen-org/dataset/tobacco-control-policy-and-prevalence/version/2009-Jun-04/params/enhancement/1/smoking"
+];
+load(datasets);
+</script>
+
+   </body>
+</html>
